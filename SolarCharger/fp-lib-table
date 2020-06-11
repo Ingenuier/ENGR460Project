@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name IRF)(type KiCad)(uri "C:/Users/Dominick Christensen/Documents/KiCad/Solar Charger/2020-04-27_04-56-40/IRF.pretty")(options "")(descr ""))
+  (lib (name 338)(type KiCad)(uri "C:/Users/Dominick Christensen/Documents/KiCad/Solar Charger/2020-04-27_07-28-35/338.pretty")(options "")(descr ""))
+)

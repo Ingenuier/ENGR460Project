@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name IRF510PBF)(type Legacy)(uri "C:/Users/Dominick Christensen/Documents/KiCad/Solar Charger/2020-04-27_04-56-40/IRF510PBF.lib")(options "")(descr ""))
+  (lib (name L338)(type Legacy)(uri "C:/Users/Dominick Christensen/Documents/KiCad/Solar Charger/2020-04-27_07-28-35/L338.lib")(options "")(descr ""))
+)
