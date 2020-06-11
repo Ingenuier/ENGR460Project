@@ -2,7 +2,6 @@ int batteryCapacity = 2500;     //capacity rating of battery in mAh
 float resistance = 10.0;     //measured resistance of the power resistor
 int cutoffVoltage = 1600;     //maximum battery voltage (in mV) that should not be exceeded
 float cutoffTemperatureC = 35;     //maximum battery temperature that should not be exceeded (in degrees C)
-//float cutoffTemperatureF = 95;     //maximum battery temperature that should not be exceeded (in degrees F)
 long cutoffTime = 46800000;     //maximum charge time of 13 hours that should not be exceeded
 
 int outputPin = 9;     // Output signal wire connected to digital pin 9
@@ -20,7 +19,7 @@ int analogPinThree = 2;     //third voltage probe connected to analog pin 2
 float valueProbeThree = 0;     //variable to store the value of analogPinThree
 float tmp36Voltage = 0;     //calculated voltage at analogPinThree
 float temperatureC = 0;     //calculated temperature of probe in degrees C
-//float temperatureF = 0;     //calculated temperature of probe in degrees F
+
 
 float voltageDifference = 0;     //difference in voltage between analogPinOne and analogPinTwo
 float batteryVoltage = 0;     //calculated voltage of battery
@@ -78,11 +77,6 @@ void loop()
   Serial.print("Temperature (degrees C) ");     //display the temperature in degrees C
   Serial.println(temperatureC); 
  
- /*
-  temperatureF = (temperatureC * 9.0 / 5.0) + 32.0;     //convert to Fahrenheit
-  Serial.print("Temperature (degrees F) ");
-  Serial.println(temperatureF); 
- */
  
   Serial.println();     //extra spaces to make debugging data easier to read
   Serial.println();  
@@ -112,14 +106,7 @@ void loop()
     outputValue = 0;
     Serial.print("Max Temperature Exceeded");
    }
-   
-  /*
-  if(temperatureF > cutoffTemperatureF)     //stop charging if the battery temperature exceeds the safety threshold
-   {
-    outputValue = 0;
-   }
-   */
-   
+
    if(batteryVoltage > cutoffVoltage)     //stop charging if the battery voltage exceeds the safety threshold
    {
     outputValue = 0;
